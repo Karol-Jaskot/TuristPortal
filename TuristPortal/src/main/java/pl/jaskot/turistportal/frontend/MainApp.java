@@ -8,14 +8,13 @@ import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
+import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.page.Viewport;
 import com.vaadin.flow.component.select.Select;
 import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
-import com.vaadin.flow.theme.Theme;
-import com.vaadin.flow.theme.lumo.Lumo;
 import org.springframework.beans.factory.annotation.Autowired;
 import pl.jaskot.turistportal.backend.CountryGenerator;
 import pl.jaskot.turistportal.backend.QuestionGenerator;
@@ -46,8 +45,9 @@ public class MainApp extends AppLayout {
     private Div pages;
     private Set<Component> pagesShown;
     private Select<String> selectLanguage;
+    private Notification notification;
 
-    //dane oferty
+    // bazy danych
     @Autowired
     private CountryRepo countryRepo;
     @Autowired
@@ -57,13 +57,13 @@ public class MainApp extends AppLayout {
         this.countryRepo = countryRepo;
         this.questionRepo = questionRepo;
 
+        // pasek górny
         Label lbName = new Label("Jaskot & Bury Travel ");
         addToNavbar(new DrawerToggle(), lbName);
 
-        // dodanie oferty
+        // tworzenie baz danych
         addOferts();
         addQuestions();
-
 
         // kontrola widoków
         createTabs();
@@ -77,7 +77,14 @@ public class MainApp extends AppLayout {
         selectLanguage = new Select<>("Polski", "English","Français","Italiano", "Deutsch","Türk","فارسی" ,"العربية");
         selectLanguage.setLabel("Język:");
         selectLanguage.setValue("Polski");
+        selectLanguage.addValueChangeListener(e->showNotification(selectLanguage.getValue()));
         addToDrawer(selectLanguage);
+    }
+
+    private void showNotification(String value) {
+        notification = new Notification("Język zmieniony na "+value, 3000);
+        notification.setPosition(Notification.Position.BOTTOM_CENTER);
+        notification.open();
     }
 
     private void addOferts() {

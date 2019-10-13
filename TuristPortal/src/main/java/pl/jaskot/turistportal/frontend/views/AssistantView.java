@@ -14,38 +14,53 @@ import pl.jaskot.turistportal.backend.entity.QuestionRepo;
 
 public class AssistantView extends VerticalLayout {
 
+    //bazy danych
     private CountryRepo countryRepo;
     private QuestionRepo questionRepo;
+    // komponenty
     private Label lbWelcome;
     private Button btReset;
     private ProgressBar progressBar;
     private Image image;
 
+    // start widoku, pusta strona, nic nie dodawać
     public AssistantView(CountryRepo countryRepo, QuestionRepo questionRepo){
         this.countryRepo = countryRepo;
         this.questionRepo = questionRepo;
         setDefaultHorizontalComponentAlignment(Alignment.CENTER);
+        createComponents();
+        cQ(1);
+    }
+
+    // tworzenie komponentów
+    private void createComponents() {
         lbWelcome = new Label("Asystent Saszka pomoże Ci dobrać właściwą wycieczkę:");
-        btReset = new Button("Reset");
+
         image = new Image("https://www.fototapety24.net/img/wlasne_foto/d/fototapeta_wschod_slonca_nad_polem_lawendy.jpg","Foto");
         image.setHeight("70px");
         image.setHeightFull();
         image.setWidthFull();
+
         progressBar = new ProgressBar();
         progressBar.setValue(0.000);
+
+        btReset = new Button("Reset");
         btReset.addClickListener(e-> resetOption());
-        cQ(1);
     }
 
+    // reset całego algorytmu
     private void resetOption(){
         cQ(1);
         progressBar.setValue(0.000);
         lbWelcome.setText("Asystent Saszka pomoże Ci dobrać właściwą wycieczkę");
     }
 
+    // wysłanie numeru pytania
     private void cQ(int i){
         createQuestion(questionRepo.findByNumber(i));
     }
+
+    // kontrola paska postępu
     private void pB(int i){
         if(i==1){
             progressBar.setValue(0.250);
@@ -61,21 +76,24 @@ public class AssistantView extends VerticalLayout {
         }
     }
 
+    // metoda tworzenia widoku pytania
     private void createQuestion(Question question){
         removeAll();
+
         Label lbQuestion = new Label();
-        Div divButtons = new Div();
-        Button trueAnswer = new Button("Tak");
-        Button falseAnswer = new Button("Nie");
-        divButtons.add(trueAnswer , falseAnswer);
         lbQuestion.setText(question.getQuestionText());
 
+        Div divButtons = new Div();
+        Button trueAnswer = new Button("Tak");
         trueAnswer.addClickListener(e-> trueOption(question));
+        Button falseAnswer = new Button("Nie");
         falseAnswer.addClickListener(e-> falseOption(question));
 
+        divButtons.add(trueAnswer , falseAnswer);
         add(image, lbWelcome,progressBar, lbQuestion, divButtons);
     }
 
+    // metoda tworzenia widoku wycieczki
     private void showCountry(String name){
         removeAll();
         lbWelcome.setText("Saszka znalazł najlepszą wycieczkę!");
@@ -93,6 +111,7 @@ public class AssistantView extends VerticalLayout {
         add(btBuyTravel ,btReset);
     }
 
+    // opcje na tak
     private void trueOption(Question question) {
         switch (question.getNumber()){
             case 1:{
@@ -173,6 +192,7 @@ public class AssistantView extends VerticalLayout {
         }
     }
 
+    // opcje na nie
     private void falseOption(Question question) {
         switch (question.getNumber()){
             case 1:{
