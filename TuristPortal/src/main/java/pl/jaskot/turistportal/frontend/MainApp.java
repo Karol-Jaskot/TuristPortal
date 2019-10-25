@@ -20,6 +20,7 @@ import pl.jaskot.turistportal.backend.CountryGenerator;
 import pl.jaskot.turistportal.backend.QuestionGenerator;
 import pl.jaskot.turistportal.backend.entity.CountryRepo;
 import pl.jaskot.turistportal.backend.entity.QuestionRepo;
+import pl.jaskot.turistportal.backend.language.LanguageChange;
 import pl.jaskot.turistportal.frontend.views.AssistantView;
 import pl.jaskot.turistportal.frontend.views.AuthorView;
 import pl.jaskot.turistportal.frontend.views.CountryView;
@@ -45,7 +46,6 @@ public class MainApp extends AppLayout {
     private Div pages;
     private Set<Component> pagesShown;
     private Select<String> selectLanguage;
-    private Notification notification;
 
     // bazy danych
     @Autowired
@@ -56,6 +56,7 @@ public class MainApp extends AppLayout {
     public MainApp(CountryRepo countryRepo, QuestionRepo questionRepo){
         this.countryRepo = countryRepo;
         this.questionRepo = questionRepo;
+
 
         // pasek górny
         Label lbName = new Label("Jaskot & Bury Travel ");
@@ -74,17 +75,11 @@ public class MainApp extends AppLayout {
     }
 
     private void creareSelesctLanguage() {
-        selectLanguage = new Select<>("Polski", "English","Français","Italiano", "Deutsch","Türk","فارسی" ,"العربية");
+        selectLanguage = new Select<>("Polski", "English","Français","Italiano", "Deutsch","Türk");
         selectLanguage.setLabel("Język:");
         selectLanguage.setValue("Polski");
-        selectLanguage.addValueChangeListener(e->showNotification(selectLanguage.getValue()));
+        selectLanguage.addValueChangeListener(e->setTabsName(selectLanguage.getValue()));
         addToDrawer(selectLanguage);
-    }
-
-    private void showNotification(String value) {
-        notification = new Notification("Język zmieniony na "+value, 3000);
-        notification.setPosition(Notification.Position.BOTTOM_CENTER);
-        notification.open();
     }
 
     private void addOferts() {
@@ -98,29 +93,29 @@ public class MainApp extends AppLayout {
 
     private void createViews(){
 
-        tab1 = new Tab(new Icon(VaadinIcon.DIAMOND));
-        tab1.add("Witamy");
+        tab1 = new Tab();
+        LanguageChange.setTabName(tab1,1,"Polski");
         page1 = new Div();
         WelcomeView welcomeView = new WelcomeView();
         page1.add(welcomeView);
         page1.add();
 
-        tab2 = new Tab(new Icon(VaadinIcon.SUITCASE));
-        tab2.add(" Oferta");
+        tab2 = new Tab();
+        LanguageChange.setTabName(tab2,2,"Polski");
         page2 = new Div();
         CountryView countryView = new CountryView(countryRepo);
         page2.add(countryView);
         page2.setVisible(false);
 
-        tab3 = new Tab(new Icon(VaadinIcon.USER_STAR));
-        tab3.add(" Asystent");
+        tab3 = new Tab();
+        LanguageChange.setTabName(tab3,3,"Polski");
         page3 = new Div();
         AssistantView  assistantView = new AssistantView(countryRepo, questionRepo);
         page3.add(assistantView);
         page3.setVisible(false);
 
-        tab4 = new Tab(new Icon(VaadinIcon.USER_CARD));
-        tab4.add(" Autorzy");
+        tab4 = new Tab();
+        LanguageChange.setTabName(tab4,4,"Polski");
         page4 = new Div();
         AuthorView authorView = new AuthorView();
         page4.add(authorView);
@@ -157,4 +152,14 @@ public class MainApp extends AppLayout {
         setContent(selectedPage);
         pagesShown.add(selectedPage);
     }
+
+    private void setTabsName( String language){
+        LanguageChange.setTabName(tab1,1, language);
+        LanguageChange.setTabName(tab2,2, language);
+        LanguageChange.setTabName(tab3,3, language);
+        LanguageChange.setTabName(tab4,4, language);
+        LanguageChange.setSelectLang(selectLanguage, language);
+        LanguageChange.showLangInfo(language);
+    }
+
 }

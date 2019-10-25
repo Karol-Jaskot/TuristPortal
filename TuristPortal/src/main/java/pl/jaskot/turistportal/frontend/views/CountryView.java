@@ -2,6 +2,7 @@ package pl.jaskot.turistportal.frontend.views;
 
 import com.vaadin.flow.component.accordion.Accordion;
 import com.vaadin.flow.component.html.Label;
+import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import pl.jaskot.turistportal.backend.entity.Country;
@@ -18,12 +19,14 @@ public class CountryView extends VerticalLayout {
     public CountryView(CountryRepo countryRepo) {
         this.countryRepo = countryRepo;
         setDefaultHorizontalComponentAlignment(Alignment.CENTER);
-        getStyle().set("backgroundColor", "GhostWhite");
+        addClassName("country-view");
 
-        Label welcomeText = new Label("Poznaj naszą ofertę:");
         Accordion accordion = new Accordion();
         List<Country> countryList = new ArrayList();
         countryList.addAll((Collection<? extends Country>) countryRepo.findAll());
+
+        H1 title = new H1("Oferta podróży");
+        title.getElement().getThemeList().add("dark");
 
         //tworzenie listy elementów
         for(Country country: countryList){
@@ -37,6 +40,6 @@ public class CountryView extends VerticalLayout {
             accordion.add(country.getName(), thisCountry);
         }
         accordion.setWidthFull();
-        add( welcomeText ,accordion);
+        add(title ,accordion);
     }
 }
