@@ -1,6 +1,8 @@
 package pl.jaskot.turistportal.frontend.views;
 
+import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Label;
@@ -44,7 +46,7 @@ public class AssistantView extends VerticalLayout {
         progressBar = new ProgressBar();
         progressBar.setValue(0.000);
 
-        btReset = new Button("Reset");
+        btReset = createButton("Reset");
         btReset.addClickListener(e-> resetOption());
     }
 
@@ -84,10 +86,12 @@ public class AssistantView extends VerticalLayout {
         lbQuestion.setText(question.getQuestionText());
 
         Div divButtons = new Div();
-        Button trueAnswer = new Button("Tak");
+        Button trueAnswer = createButton("Tak");
         trueAnswer.addClickListener(e-> trueOption(question));
-        Button falseAnswer = new Button("Nie");
+        Button falseAnswer = createButton("Nie");
         falseAnswer.addClickListener(e-> falseOption(question));
+
+
 
         divButtons.add(trueAnswer , falseAnswer);
         add(image, lbWelcome,progressBar, lbQuestion, divButtons);
@@ -104,11 +108,17 @@ public class AssistantView extends VerticalLayout {
                     new Label(country.getTextOffer()),
                     new Label("Cena: "+country.getPrice()));
         }finally {}
-        Button btBuyTravel = new Button("Kup wycieczkę!");
+        Button btBuyTravel = createButton("Kup wyciczkę");
         Notification notification = new Notification(
                 "Gratulujemy kupna wspaniałej wycieczki do "+name+"!", 3000, Notification.Position.BOTTOM_CENTER);
         btBuyTravel.addClickListener(e->notification.open());
         add(btBuyTravel ,btReset);
+    }
+
+    private Button createButton(String text){
+        Button button = new Button(text);
+        button.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+        return button;
     }
 
     // opcje na tak
