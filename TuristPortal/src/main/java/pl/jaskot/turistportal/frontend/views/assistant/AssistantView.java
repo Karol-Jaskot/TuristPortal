@@ -10,6 +10,10 @@ import pl.jaskot.turistportal.backend.entity.Country;
 import pl.jaskot.turistportal.backend.entity.CountryRepo;
 import pl.jaskot.turistportal.backend.entity.Question;
 import pl.jaskot.turistportal.backend.entity.QuestionRepo;
+import pl.jaskot.turistportal.frontend.views.assistant.buttonsOptions.ButtonFalseCountry;
+import pl.jaskot.turistportal.frontend.views.assistant.buttonsOptions.ButtonFalseQuestion;
+import pl.jaskot.turistportal.frontend.views.assistant.buttonsOptions.ButtonTrueCountry;
+import pl.jaskot.turistportal.frontend.views.assistant.buttonsOptions.ButtonTrueQuestion;
 
 /**
  * Page with assistant
@@ -115,11 +119,11 @@ public class AssistantView extends VerticalLayout {
     private void trueOption(Question question) {
         int number = question.getNumber();
         if(number<8){
-            int nextNumber = AssistantMethods.trueOptionsToQuestions(number, progressBar);
+            int nextNumber = ButtonTrueQuestion.option(number, progressBar);
             cQ(nextNumber);
         }
         else {
-            String countryName = AssistantMethods.trueOptionsToCountry(number, progressBar);
+            String countryName = ButtonTrueCountry.option(number, progressBar);
             showCountry(countryName);
         }
     }
@@ -131,11 +135,11 @@ public class AssistantView extends VerticalLayout {
     private void falseOption(Question question) {
         int number = question.getNumber();
         if(number<8){
-            int nextNumber = AssistantMethods.falseOptionsToQuestions(number, progressBar);
+            int nextNumber = ButtonFalseQuestion.option(number, progressBar);
             cQ(nextNumber);
         }
         else {
-            String countryName = AssistantMethods.falseOptionsToCountry(number, progressBar);
+            String countryName = ButtonFalseCountry.option(number, progressBar);
             showCountry(countryName);
         }
     }
