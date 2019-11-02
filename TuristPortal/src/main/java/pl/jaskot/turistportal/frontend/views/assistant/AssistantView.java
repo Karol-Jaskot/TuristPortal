@@ -84,6 +84,7 @@ public class AssistantView extends VerticalLayout {
 
         Div divButtons = new Div();
         Button trueAnswer = AssistantMethods.createButton("Tak");
+        trueAnswer.getStyle().set("margin","12px");
         trueAnswer.addClickListener(e-> trueOption(question));
         Button falseAnswer = AssistantMethods.createButton("Nie");
         falseAnswer.addClickListener(e-> falseOption(question));

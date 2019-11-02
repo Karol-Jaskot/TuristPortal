@@ -1,8 +1,11 @@
 package pl.jaskot.turistportal.frontend.views;
 
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.progressbar.ProgressBar;
+import com.vaadin.flow.router.Route;
+
 
 public class AuthorView extends VerticalLayout {
 
