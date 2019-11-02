@@ -8,7 +8,7 @@ public class WelcomeView extends VerticalLayout {
 
     public WelcomeView() {
         setDefaultHorizontalComponentAlignment(Alignment.CENTER);
-
+        setSizeFull();
         addClassName("welcome-view");
         Label lbWelcome = new Label(" Witamy w naszym biurze podróży!");
         Image image = new Image("https://www.goforworld.com/wp-content/uploads/2017/01/travel_map.jpg","FajnaFota");

@@ -1,9 +1,12 @@
 package pl.jaskot.turistportal.frontend;
 
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
+import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.dependency.HtmlImport;
+import com.vaadin.flow.component.html.Aside;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.page.Viewport;
@@ -14,6 +17,8 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
 import com.vaadin.flow.theme.Theme;
 import com.vaadin.flow.theme.lumo.Lumo;
+import com.vaadin.flow.theme.lumo.LumoThemeDefinition;
+import com.vaadin.flow.theme.material.Material;
 import org.springframework.beans.factory.annotation.Autowired;
 import pl.jaskot.turistportal.backend.CountryGenerator;
 import pl.jaskot.turistportal.backend.QuestionGenerator;
@@ -34,7 +39,7 @@ import java.util.stream.Stream;
 @Viewport("width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes")
 
 @HtmlImport("styles/shared-styles.html")
-@Theme(value = Lumo.class, variant = Lumo.DARK)
+@Theme(value = Material.class, variant = Material.DARK)
 public class MainApp extends AppLayout {
 
 
@@ -76,6 +81,7 @@ public class MainApp extends AppLayout {
     private void creareSelesctLanguage() {
         selectLanguage = new Select<>("Polski", "English","Français","Italiano", "Deutsch","Türk");
         selectLanguage.setLabel("Język:");
+        selectLanguage.setSizeFull();
         selectLanguage.setValue("Polski");
         selectLanguage.addValueChangeListener(e->setTabsName(selectLanguage.getValue()));
         addToDrawer(selectLanguage);
@@ -84,7 +90,6 @@ public class MainApp extends AppLayout {
     private void addOferts() {
         CountryGenerator countryGenerator = new CountryGenerator(countryRepo);
     }
-
     private void addQuestions(){ QuestionGenerator questionGenerator = new QuestionGenerator(questionRepo); }
 
     // poniżej metody kontroli widoków aplikacji, nic nie zmieniać

@@ -38,7 +38,8 @@ public abstract class AssistantMethods {
      */
     public static Button createButton(String text){
         Button button = new Button(text);
-        button.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+        button.addThemeVariants(ButtonVariant.MATERIAL_CONTAINED);
+        button.getStyle().set("border-radius", "1em");
         return button;
     }
 
