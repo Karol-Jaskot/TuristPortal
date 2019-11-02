@@ -20,7 +20,7 @@ import pl.jaskot.turistportal.backend.QuestionGenerator;
 import pl.jaskot.turistportal.backend.entity.CountryRepo;
 import pl.jaskot.turistportal.backend.entity.QuestionRepo;
 import pl.jaskot.turistportal.backend.language.LanguageChange;
-import pl.jaskot.turistportal.frontend.views.AssistantView;
+import pl.jaskot.turistportal.frontend.views.assistant.AssistantView;
 import pl.jaskot.turistportal.frontend.views.AuthorView;
 import pl.jaskot.turistportal.frontend.views.CountryView;
 import pl.jaskot.turistportal.frontend.views.WelcomeView;
