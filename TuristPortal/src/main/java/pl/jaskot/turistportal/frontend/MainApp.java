@@ -6,22 +6,21 @@ import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.dependency.HtmlImport;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Label;
-import com.vaadin.flow.component.icon.Icon;
-import com.vaadin.flow.component.icon.VaadinIcon;
-import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.page.Viewport;
 import com.vaadin.flow.component.select.Select;
 import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
+import com.vaadin.flow.theme.Theme;
+import com.vaadin.flow.theme.lumo.Lumo;
 import org.springframework.beans.factory.annotation.Autowired;
 import pl.jaskot.turistportal.backend.CountryGenerator;
 import pl.jaskot.turistportal.backend.QuestionGenerator;
 import pl.jaskot.turistportal.backend.entity.CountryRepo;
 import pl.jaskot.turistportal.backend.entity.QuestionRepo;
 import pl.jaskot.turistportal.backend.language.LanguageChange;
-import pl.jaskot.turistportal.frontend.views.AssistantView;
+import pl.jaskot.turistportal.frontend.views.assistant.AssistantView;
 import pl.jaskot.turistportal.frontend.views.AuthorView;
 import pl.jaskot.turistportal.frontend.views.CountryView;
 import pl.jaskot.turistportal.frontend.views.WelcomeView;
@@ -35,6 +34,7 @@ import java.util.stream.Stream;
 @Viewport("width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes")
 
 @HtmlImport("styles/shared-styles.html")
+@Theme(value = Lumo.class, variant = Lumo.DARK)
 public class MainApp extends AppLayout {
 
 
@@ -56,7 +56,6 @@ public class MainApp extends AppLayout {
     public MainApp(CountryRepo countryRepo, QuestionRepo questionRepo){
         this.countryRepo = countryRepo;
         this.questionRepo = questionRepo;
-
 
         // pasek górny
         Label lbName = new Label("Jaskot & Bury Travel ");

@@ -18,8 +18,9 @@ public class CountryView extends VerticalLayout {
 
     public CountryView(CountryRepo countryRepo) {
         this.countryRepo = countryRepo;
+        setSizeFull();
         setDefaultHorizontalComponentAlignment(Alignment.CENTER);
-        addClassName("country-view");
+        //addClassName("country-view");
 
         Accordion accordion = new Accordion();
         List<Country> countryList = new ArrayList();
