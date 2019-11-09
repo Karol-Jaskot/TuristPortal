@@ -1,30 +1,30 @@
 package pl.jaskot.turistportal.frontend;
 
 import com.vaadin.flow.component.Component;
-import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
-import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.dependency.HtmlImport;
-import com.vaadin.flow.component.html.Aside;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.page.Viewport;
 import com.vaadin.flow.component.select.Select;
 import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.Tabs;
+import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
 import com.vaadin.flow.theme.Theme;
-import com.vaadin.flow.theme.lumo.Lumo;
-import com.vaadin.flow.theme.lumo.LumoThemeDefinition;
 import com.vaadin.flow.theme.material.Material;
 import org.springframework.beans.factory.annotation.Autowired;
 import pl.jaskot.turistportal.backend.CountryGenerator;
 import pl.jaskot.turistportal.backend.QuestionGenerator;
 import pl.jaskot.turistportal.backend.entity.CountryRepo;
 import pl.jaskot.turistportal.backend.entity.QuestionRepo;
-import pl.jaskot.turistportal.backend.language.LanguageChange;
+import pl.jaskot.turistportal.backend.language.AbstractLanguage;
+import pl.jaskot.turistportal.backend.language.allLanguage.EnglishLanguage;
+import pl.jaskot.turistportal.backend.language.allLanguage.GermanLanguage;
+import pl.jaskot.turistportal.backend.language.allLanguage.ItalianLanguage;
+import pl.jaskot.turistportal.backend.language.allLanguage.PolishLanguage;
 import pl.jaskot.turistportal.frontend.views.assistant.AssistantView;
 import pl.jaskot.turistportal.frontend.views.AuthorView;
 import pl.jaskot.turistportal.frontend.views.CountryView;
@@ -51,6 +51,10 @@ public class MainApp extends AppLayout {
     private Div pages;
     private Set<Component> pagesShown;
     private Select<String> selectLanguage;
+    private AbstractLanguage language;
+    private List<AbstractLanguage> languageList;
+    private List<String> languagesName;
+    private Iterator<AbstractLanguage> langIterator;
 
     // bazy danych
     @Autowired
@@ -67,8 +71,8 @@ public class MainApp extends AppLayout {
         addToNavbar(new DrawerToggle(), lbName);
 
         // tworzenie baz danych
-        addOferts();
-        addQuestions();
+        //addOferts();
+        //addQuestions();
 
         // kontrola widoków
         createTabs();
@@ -79,11 +83,26 @@ public class MainApp extends AppLayout {
     }
 
     private void creareSelesctLanguage() {
-        selectLanguage = new Select<>("Polski", "English","Français","Italiano", "Deutsch","Türk");
-        selectLanguage.setLabel("Język:");
+        languageList = new ArrayList();
+        // trzeba tutaj dodać język do listy
+        languageList.add(new PolishLanguage());
+        languageList.add(new EnglishLanguage());
+        languageList.add(new GermanLanguage());
+        languageList.add(new ItalianLanguage());
+
+        languagesName = new ArrayList<>();
+        langIterator = languageList.iterator();
+        while(langIterator.hasNext()) {
+            AbstractLanguage thisLanguage = langIterator.next();
+            languagesName.add(thisLanguage.getLangName());
+        }
+        selectLanguage = new Select<>();
+        selectLanguage.setItems(languagesName);
         selectLanguage.setSizeFull();
-        selectLanguage.setValue("Polski");
+        selectLanguage.setValue(languageList.get(0).getLangName());
         selectLanguage.addValueChangeListener(e->setTabsName(selectLanguage.getValue()));
+        language = languageList.get(0);
+        language.setTabsTextToStart(tab1, tab2, tab3, tab4, selectLanguage);
         addToDrawer(selectLanguage);
     }
 
@@ -98,28 +117,24 @@ public class MainApp extends AppLayout {
     private void createViews(){
 
         tab1 = new Tab();
-        LanguageChange.setTabName(tab1,1,"Polski");
         page1 = new Div();
         WelcomeView welcomeView = new WelcomeView();
         page1.add(welcomeView);
         page1.add();
 
         tab2 = new Tab();
-        LanguageChange.setTabName(tab2,2,"Polski");
         page2 = new Div();
         CountryView countryView = new CountryView(countryRepo);
         page2.add(countryView);
         page2.setVisible(false);
 
         tab3 = new Tab();
-        LanguageChange.setTabName(tab3,3,"Polski");
         page3 = new Div();
         AssistantView  assistantView = new AssistantView(countryRepo, questionRepo);
         page3.add(assistantView);
         page3.setVisible(false);
 
         tab4 = new Tab();
-        LanguageChange.setTabName(tab4,4,"Polski");
         page4 = new Div();
         AuthorView authorView = new AuthorView();
         page4.add(authorView);
@@ -157,13 +172,12 @@ public class MainApp extends AppLayout {
         pagesShown.add(selectedPage);
     }
 
-    private void setTabsName( String language){
-        LanguageChange.setTabName(tab1,1, language);
-        LanguageChange.setTabName(tab2,2, language);
-        LanguageChange.setTabName(tab3,3, language);
-        LanguageChange.setTabName(tab4,4, language);
-        LanguageChange.setSelectLang(selectLanguage, language);
-        LanguageChange.showLangInfo(language);
+    private void setTabsName(String value){
+        for(AbstractLanguage abstractLanguage: languageList){
+            if(abstractLanguage.getLangName().equals(value)){
+                language = abstractLanguage;
+            }
+        }
+        language.setTabsText(tab1, tab2, tab3, tab4, selectLanguage);
     }
-
 }
