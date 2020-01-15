@@ -13,8 +13,6 @@ public class AuthorView extends VerticalLayout {
         getStyle().set("backgroundColor", "white");
         setDefaultHorizontalComponentAlignment(Alignment.CENTER);
 
-        // Bury
-        createImage("https://thfcomms.com.au/wp-content/uploads/2018/02/Bury-Logo_biggest-new.jpg");
         // Jaskot
         createImage("https://www.traktorpool.pl/media/hhp/Jaskot_Grzegorz_101164.jpg?force=1&text=");
 

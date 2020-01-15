@@ -9,7 +9,7 @@ public class PolishLanguage extends AbstractLanguage{
         setTabOneText("Witamy");
         setTabTwoText("Oferta");
         setTabThreeText("Asystent");
-        setTabFourText("Autorzy");
+        setTabFourText("Autor");
         setSelectText("Język");
         setNotificationText("Język zmieniono na polski");
     }

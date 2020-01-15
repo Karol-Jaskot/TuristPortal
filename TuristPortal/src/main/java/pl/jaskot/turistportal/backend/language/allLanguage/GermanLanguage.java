@@ -8,7 +8,7 @@ public class GermanLanguage extends AbstractLanguage {
         setTabOneText("Willkommen");
         setTabTwoText("Offerte");
         setTabThreeText("Assistent");
-        setTabFourText("Autoren");
+        setTabFourText("Autore");
         setSelectText("Zunge");
         setNotificationText("Die Sprache wurde auf Deutsch geändert");
     }

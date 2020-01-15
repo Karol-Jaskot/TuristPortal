@@ -9,7 +9,7 @@ public class ItalianLanguage  extends AbstractLanguage {
         setTabOneText("Benvenuto");
         setTabTwoText("Offerta");
         setTabThreeText("Assistente");
-        setTabFourText("Autori");
+        setTabFourText("Autor");
         setSelectText("Lingua");
         setNotificationText("La lingua è stata cambiata in tedesco");
     }

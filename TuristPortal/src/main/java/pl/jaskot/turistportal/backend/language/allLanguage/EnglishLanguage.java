@@ -8,7 +8,7 @@ public class EnglishLanguage extends AbstractLanguage{
         setTabOneText("Welcome");
         setTabTwoText("Offer");
         setTabThreeText("Assistant");
-        setTabFourText("Authors");
+        setTabFourText("Author");
         setSelectText("Language");
         setNotificationText("The language has been changed to English");
     }

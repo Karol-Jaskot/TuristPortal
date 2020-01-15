@@ -67,7 +67,7 @@ public class MainApp extends AppLayout {
         this.questionRepo = questionRepo;
 
         // pasek górny
-        Label lbName = new Label("Jaskot & Bury Travel ");
+        Label lbName = new Label("Jaskot Travel ");
         addToNavbar(new DrawerToggle(), lbName);
 
         // tworzenie baz danych
