@@ -62,7 +62,7 @@ public class AssistantView extends VerticalLayout {
     private void resetOption(){
         cQ(1);
         AssistantMethods.controlProgressBar(progressBar, 0);
-        lbWelcome.setText("Asystent Saszka pomoże Ci dobrać właściwą wycieczkę");
+        lbWelcome.setText("Asystent Natasza pomoże Ci dobrać właściwą wycieczkę");
     }
 
     /**
@@ -99,7 +99,7 @@ public class AssistantView extends VerticalLayout {
      */
     private void showCountry(String name){
         removeAll();
-        lbWelcome.setText("Saszka znalazł najlepszą wycieczkę!");
+        lbWelcome.setText("Natasza znalazła najlepszą wycieczkę!");
         add(image,lbWelcome, progressBar);
         try {
             Country country = countryRepo.findByName(name);
