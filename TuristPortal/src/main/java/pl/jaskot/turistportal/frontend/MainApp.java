@@ -44,8 +44,8 @@ public class MainApp extends AppLayout {
 
 
     // dane aplikacji
-    private Tab tab1, tab2, tab3, tab4;
-    private Div page1, page2, page3, page4;
+    private Tab tab1, tab2, tab3, tab4, tab5;
+    private Div page1, page2, page3, page4, page5;
     private Map<Tab, Component> tabsToPages;
     private Tabs tabs;
     private Div pages;
@@ -139,6 +139,7 @@ public class MainApp extends AppLayout {
         AuthorView authorView = new AuthorView();
         page4.add(authorView);
         page4.setVisible(false);
+
     }
 
     private void connectingTabsToPages(){
