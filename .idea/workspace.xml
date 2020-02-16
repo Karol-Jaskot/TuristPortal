@@ -1,44 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="turistportal:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="91fdcd0e-aab1-4d7a-b035-689d293bb699" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="831db409-8a09-4e69-a97c-93842808ff72" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/jaskot/turistportal/backend/services/ViewsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/jaskot/turistportal/frontend/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/jaskot/turistportal/frontend/MainApp.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectId" id="1SA6wzHsv0kgoqo3yCLltrwpD1n" />
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <option value="CSS File" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Sce4oRQgLiB0NvfGxQ3jHc2tzN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Projekty\TouristApp\TuristPortal\src\main\webapp\frontend\styles" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.TuristportalApplication">
+    <configuration name="TuristportalApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="turistportal" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="pl.jaskot.turistportal.TuristportalApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\Kares\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="91fdcd0e-aab1-4d7a-b035-689d293bb699" name="Default Changelist" comment="" />
-      <created>1570994295906</created>
+      <changelist id="831db409-8a09-4e69-a97c-93842808ff72" name="Default Changelist" comment="" />
+      <created>1571867123081</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1570994295906</updated>
-      <workItem from="1570994298851" duration="20000" />
+      <updated>1571867123081</updated>
+      <workItem from="1571867126805" duration="2000" />
+      <workItem from="1571867166606" duration="19000" />
+      <workItem from="1572027007333" duration="7000" />
+      <workItem from="1572027028891" duration="1789000" />
+      <workItem from="1572037005654" duration="4680000" />
+      <workItem from="1572169539842" duration="357000" />
+      <workItem from="1572169927452" duration="5992000" />
+      <workItem from="1572546216090" duration="491000" />
+      <workItem from="1572693366236" duration="2428000" />
+      <workItem from="1572707787309" duration="3927000" />
+      <workItem from="1572713598114" duration="675000" />
+      <workItem from="1572716164325" duration="73000" />
+      <workItem from="1572716309365" duration="3431000" />
+      <workItem from="1572721094473" duration="8158000" />
+      <workItem from="1572776610181" duration="602000" />
+      <workItem from="1573244930039" duration="7731000" />
+      <workItem from="1573288508392" duration="4269000" />
+      <workItem from="1573309317570" duration="14000" />
+      <workItem from="1573309396061" duration="4000" />
+      <workItem from="1573406575221" duration="462000" />
+      <workItem from="1573462784242" duration="1202000" />
+      <workItem from="1575056511323" duration="3692000" />
+      <workItem from="1575060297807" duration="2257000" />
+      <workItem from="1575226713764" duration="13000" />
+      <workItem from="1575465756556" duration="225000" />
+      <workItem from="1575466064829" duration="2000" />
+      <workItem from="1575485290671" duration="2330000" />
+      <workItem from="1575636028402" duration="190000" />
+      <workItem from="1576439846659" duration="3869000" />
+      <workItem from="1576443823179" duration="3634000" />
+      <workItem from="1579116724297" duration="176000" />
+      <workItem from="1579116930909" duration="113000" />
+      <workItem from="1579117079451" duration="113000" />
+      <workItem from="1579117225827" duration="685000" />
+      <workItem from="1580051303376" duration="172000" />
+      <workItem from="1580557808191" duration="185000" />
+      <workItem from="1580643032404" duration="327000" />
+      <workItem from="1580643378377" duration="93000" />
+      <workItem from="1580643485326" duration="16000" />
+      <workItem from="1580915560808" duration="1548000" />
+      <workItem from="1580917143332" duration="1212000" />
+      <workItem from="1580918495830" duration="201000" />
+      <workItem from="1581080823770" duration="18000" />
+      <workItem from="1581096834417" duration="286000" />
     </task>
     <servers />
   </component>
@@ -50,10 +157,53 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1580917051152">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580917051152" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1580917051152">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580917051152" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1580917051152">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580917051152" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1580917051152">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580917051152" />
+    <state width="1877" height="281" key="GridCell.Tab.1.bottom" timestamp="1580917051152">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580917051152" />
+    <state width="1877" height="281" key="GridCell.Tab.1.center" timestamp="1580917051152">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580917051152" />
+    <state width="1877" height="281" key="GridCell.Tab.1.left" timestamp="1580917051152">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580917051152" />
+    <state width="1877" height="281" key="GridCell.Tab.1.right" timestamp="1580917051152">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580917051152" />
+    <state x="342" y="141" key="new project wizard" timestamp="1581097119451">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="141" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1581097119451" />
   </component>
 </project>
