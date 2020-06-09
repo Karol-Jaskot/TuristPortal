@@ -7,11 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="831db409-8a09-4e69-a97c-93842808ff72" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/turist1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/turist2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/save/Data.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/save/Data.mv.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +59,7 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -71,7 +68,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -154,6 +151,7 @@
       <workItem from="1581882816677" duration="11000" />
       <workItem from="1582054338604" duration="221000" />
       <workItem from="1582120210861" duration="159000" />
+      <workItem from="1591708245440" duration="49000" />
     </task>
     <servers />
   </component>
@@ -175,43 +173,34 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state width="792" height="278" key="GridCell.Tab.0.bottom" timestamp="1582054559196">
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1591708333365">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="792" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582054559196" />
-    <state width="792" height="278" key="GridCell.Tab.0.center" timestamp="1582054559196">
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591708333365" />
+    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1591708333365">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="792" height="278" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582054559196" />
-    <state width="792" height="278" key="GridCell.Tab.0.left" timestamp="1582054559195">
+    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591708333365" />
+    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1591708333364">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="792" height="278" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582054559195" />
-    <state width="792" height="278" key="GridCell.Tab.0.right" timestamp="1582054559196">
+    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591708333364" />
+    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1591708333365">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="792" height="278" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582054559196" />
-    <state width="792" height="278" key="GridCell.Tab.1.bottom" timestamp="1582054559196">
+    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591708333365" />
+    <state x="461" y="163" key="SettingsEditor" timestamp="1591708293494">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="792" height="278" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582054559196" />
-    <state width="792" height="278" key="GridCell.Tab.1.center" timestamp="1582054559196">
+    <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1591708293494" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1591708314942">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="792" height="278" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582054559196" />
-    <state width="792" height="278" key="GridCell.Tab.1.left" timestamp="1582054559196">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="792" height="278" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582054559196" />
-    <state width="792" height="278" key="GridCell.Tab.1.right" timestamp="1582054559196">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="792" height="278" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582054559196" />
-    <state x="342" y="141" key="new project wizard" timestamp="1581097119451">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="342" y="141" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1581097119451" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591708314942" />
   </component>
 </project>
