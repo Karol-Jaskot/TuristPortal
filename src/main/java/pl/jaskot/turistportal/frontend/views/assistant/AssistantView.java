@@ -46,7 +46,7 @@ public class AssistantView extends VerticalLayout {
      * Create lbWelcome, image, progressBar and btReset
       */
     private void createComponents() {
-        lbWelcome = new Label("Asystent Natasza pomoże Ci dobrać właściwą wycieczkę:");
+        lbWelcome = new Label("Nasz asystent pomoże Ci dobrać właściwą wycieczkę:");
         image = AssistantMethods.createImage();
 
         progressBar = new ProgressBar();
