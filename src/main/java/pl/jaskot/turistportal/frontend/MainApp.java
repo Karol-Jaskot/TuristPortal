@@ -42,8 +42,6 @@ import java.util.stream.Stream;
 @Theme(value = Material.class, variant = Material.DARK)
 public class MainApp extends AppLayout {
 
-
-    // dane aplikacji
     private Tab tab1, tab2, tab3, tab4, tab5;
     private Div page1, page2, page3, page4, page5;
     private Map<Tab, Component> tabsToPages;
@@ -56,7 +54,6 @@ public class MainApp extends AppLayout {
     private List<String> languagesName;
     private Iterator<AbstractLanguage> langIterator;
 
-    // bazy danych
     @Autowired
     private CountryRepo countryRepo;
     @Autowired
@@ -66,15 +63,9 @@ public class MainApp extends AppLayout {
         this.countryRepo = countryRepo;
         this.questionRepo = questionRepo;
 
-        // pasek górny
-        Label lbName = new Label("Jaskot Travel ");
+        Label lbName = new Label("Jaskot & Bury Travel ");
         addToNavbar(new DrawerToggle(), lbName);
 
-        // tworzenie baz danych
-        //addOferts();
-        //addQuestions();
-
-        // kontrola widoków
         createTabs();
         createDivPages();
         addToDrawer(tabs);
@@ -84,7 +75,7 @@ public class MainApp extends AppLayout {
 
     private void creareSelesctLanguage() {
         languageList = new ArrayList();
-        // trzeba tutaj dodać język do listy
+        // to this place add more languages
         languageList.add(new PolishLanguage());
         languageList.add(new EnglishLanguage());
         languageList.add(new GermanLanguage());
@@ -111,7 +102,7 @@ public class MainApp extends AppLayout {
     }
     private void addQuestions(){ QuestionGenerator questionGenerator = new QuestionGenerator(questionRepo); }
 
-    // poniżej metody kontroli widoków aplikacji, nic nie zmieniać
+    // views control
 // =============================================================================================================
 
     private void createViews(){

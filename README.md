@@ -1,17 +1,25 @@
 # Turist Portal
 
-> 
-> Author: Karol Jaskot
-> Student PWSZ in Legnica
-> E-mail: karol.jaskot@wp.pl
-> 
+Educational project
 
+A simple travel agency application containing an assistant that helps the user choose the best travel direction for him. The project based on an intelligent expert system that selects the right offer based on the user's response. 
 
+* Author: Karol Jaskot
+ * Student PWSZ in Legnica
+ * E-mail: karol.jaskot97@gmail.com
+
+##
+
+This project is hosted and ready to use.  
+App adress:
+https://turistportal.herokuapp.com/
 
 ### Tech
 
-* [SpringBoot] - Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run".!
-* [Vaadin] - Vaadin is an open source web framework that helps Java developers build great user experiences with minimal effort.
+* SpringBoot 
+* Hibernate
+* H2 database
+* Vaadin 
 
 ###Front image
 Welcome view
@@ -24,16 +32,20 @@ Expert View
 
 IntelijIdea is required to open this program. 
 
-Then download all dependencies.
+
+
+Install project:
 ```sh
-/pom.xml
+mvn clean
+mvn install
 ```
-After downloading them, you can launch the platform in the file:
+To start this project:
 ```sh
-/src/main/java/pl.jaskot.automat2/Automat2Application
+mvn spring-boot:run
 ```
 
 Thanks to that it will be available at =  localhost: 8080
+
 
 If port 8080 is not available, you can change the address in the file:
 ```sh
