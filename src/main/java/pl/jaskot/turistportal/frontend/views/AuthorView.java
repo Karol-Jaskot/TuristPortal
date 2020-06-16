@@ -11,9 +11,11 @@ public class AuthorView extends VerticalLayout {
 
     public AuthorView() {
         setSizeFull();
-        getStyle().set("backgroundColor", "white");
         setDefaultHorizontalComponentAlignment(Alignment.CENTER);
         addClassName("author");
+
+        createTitle("Autor projektu: Karol Jaskot");
+        createTitle("Wykorzystane technologie:");
 
         // Spring
         createImage("https://camo.githubusercontent.com/12136cf9daa20a57168a9bdee376f2e83e13c5b1/68747470733a2f2f7069636f636c692e696e666f2f696d616765732f737072696e672d626f6f742e706e67");
@@ -23,6 +25,12 @@ public class AuthorView extends VerticalLayout {
         createProgressBar();
         // Vaadin
         createImage("https://vaadin.com/images/trademark/PNG/VaadinLogo_RGB_1000x310.png");
+    }
+
+    private void createTitle(String text) {
+        H1 title = new H1(text);
+        title.getElement().getThemeList().add("dark");
+        add(title);
     }
 
     private void createProgressBar(){

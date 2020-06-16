@@ -38,11 +38,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="831db409-8a09-4e69-a97c-93842808ff72" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/save/Data.trace.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/save/Data.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/save/Data.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/banner.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/jaskot/turistportal/backend/language/AbstractLanguage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/jaskot/turistportal/backend/language/allLanguage/EnglishLanguage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/jaskot/turistportal/backend/language/allLanguage/GermanLanguage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/jaskot/turistportal/backend/language/allLanguage/ItalianLanguage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/jaskot/turistportal/backend/language/allLanguage/PolishLanguage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/jaskot/turistportal/frontend/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/jaskot/turistportal/frontend/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/jaskot/turistportal/frontend/views/AuthorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/jaskot/turistportal/frontend/views/AuthorView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/frontend/styles/shared-styles.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/frontend/styles/shared-styles.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -193,6 +198,8 @@
       <workItem from="1592157638336" duration="78000" />
       <workItem from="1592207101067" duration="449000" />
       <workItem from="1592324959293" duration="437000" />
+      <workItem from="1592325515083" duration="1490000" />
+      <workItem from="1592327169594" duration="613000" />
     </task>
     <servers />
   </component>
@@ -230,42 +237,42 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="729" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1592325042951" />
-    <state width="1802" height="275" key="GridCell.Tab.0.bottom" timestamp="1592325395291">
+    <state width="1802" height="275" key="GridCell.Tab.0.bottom" timestamp="1592326994312">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591708333365" />
-    <state width="1802" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1592325395291" />
-    <state width="1802" height="275" key="GridCell.Tab.0.center" timestamp="1592325395291">
+    <state width="1802" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1592326994312" />
+    <state width="1802" height="275" key="GridCell.Tab.0.center" timestamp="1592326994312">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591708333365" />
-    <state width="1802" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1592325395291" />
-    <state width="1802" height="275" key="GridCell.Tab.0.left" timestamp="1592325395290">
+    <state width="1802" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1592326994312" />
+    <state width="1802" height="275" key="GridCell.Tab.0.left" timestamp="1592326994311">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591708333364" />
-    <state width="1802" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1592325395290" />
-    <state width="1802" height="275" key="GridCell.Tab.0.right" timestamp="1592325395291">
+    <state width="1802" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1592326994311" />
+    <state width="1802" height="275" key="GridCell.Tab.0.right" timestamp="1592326994312">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591708333365" />
-    <state width="1802" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1592325395291" />
-    <state width="1802" height="275" key="GridCell.Tab.1.bottom" timestamp="1592325140320">
+    <state width="1802" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1592326994312" />
+    <state width="1802" height="275" key="GridCell.Tab.1.bottom" timestamp="1592326707805">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.1.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1592325140320" />
-    <state width="1802" height="275" key="GridCell.Tab.1.center" timestamp="1592325140320">
+    <state width="1802" height="275" key="GridCell.Tab.1.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1592326707805" />
+    <state width="1802" height="275" key="GridCell.Tab.1.center" timestamp="1592326707805">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.1.center/72.27.1848.1053@72.27.1848.1053" timestamp="1592325140320" />
-    <state width="1802" height="275" key="GridCell.Tab.1.left" timestamp="1592325140320">
+    <state width="1802" height="275" key="GridCell.Tab.1.center/72.27.1848.1053@72.27.1848.1053" timestamp="1592326707805" />
+    <state width="1802" height="275" key="GridCell.Tab.1.left" timestamp="1592326707805">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.1.left/72.27.1848.1053@72.27.1848.1053" timestamp="1592325140320" />
-    <state width="1802" height="275" key="GridCell.Tab.1.right" timestamp="1592325140320">
+    <state width="1802" height="275" key="GridCell.Tab.1.left/72.27.1848.1053@72.27.1848.1053" timestamp="1592326707805" />
+    <state width="1802" height="275" key="GridCell.Tab.1.right" timestamp="1592326707805">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state width="1802" height="275" key="GridCell.Tab.1.right/72.27.1848.1053@72.27.1848.1053" timestamp="1592325140320" />
+    <state width="1802" height="275" key="GridCell.Tab.1.right/72.27.1848.1053@72.27.1848.1053" timestamp="1592326707805" />
     <state x="461" y="163" key="SettingsEditor" timestamp="1591708293494">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -274,10 +281,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="305" y="280" width="1372" height="554" key="new project wizard/72.27.1848.1053@72.27.1848.1053" timestamp="1592207550528" />
-    <state x="665" y="270" width="672" height="686" key="run.anything.popup" timestamp="1592325140270">
+    <state x="665" y="270" width="672" height="686" key="run.anything.popup" timestamp="1592326994293">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591708314942" />
-    <state x="665" y="270" width="672" height="686" key="run.anything.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1592325140270" />
+    <state x="665" y="270" width="672" height="686" key="run.anything.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1592326994293" />
   </component>
 </project>
