@@ -21,7 +21,7 @@ https://turistportal.herokuapp.com/
 * H2 database
 * Vaadin 
 
-###Front image
+### Front image
 Welcome view
 ![alt text](img/turist1.png)
 
