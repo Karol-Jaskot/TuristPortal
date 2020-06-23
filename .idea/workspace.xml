@@ -37,14 +37,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="831db409-8a09-4e69-a97c-93842808ff72" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/save/Data.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/save/Data.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/save/Data.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/save/Data.trace.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/jaskot/turistportal/frontend/views/AuthorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/jaskot/turistportal/frontend/views/AuthorView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/frontend/styles/shared-styles.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/frontend/styles/shared-styles.html" afterDir="false" />
-    </list>
+    <list default="true" id="831db409-8a09-4e69-a97c-93842808ff72" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -196,6 +189,7 @@
       <workItem from="1592325515083" duration="1490000" />
       <workItem from="1592327169594" duration="1441000" />
       <workItem from="1592329273797" duration="855000" />
+      <workItem from="1592373674959" duration="5000" />
     </task>
     <servers />
   </component>
