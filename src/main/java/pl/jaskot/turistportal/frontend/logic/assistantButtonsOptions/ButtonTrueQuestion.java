@@ -1,7 +1,7 @@
-package pl.jaskot.turistportal.frontend.views.assistant.buttonsOptions;
+package pl.jaskot.turistportal.frontend.logic.assistantButtonsOptions;
 
 import com.vaadin.flow.component.progressbar.ProgressBar;
-import pl.jaskot.turistportal.frontend.views.assistant.AssistantMethods;
+import pl.jaskot.turistportal.frontend.logic.AssistantMethods;
 
 public abstract class ButtonTrueQuestion {
     /**
@@ -13,31 +13,31 @@ public abstract class ButtonTrueQuestion {
     public static int option(int number, ProgressBar progressBar) {
         switch (number){
             case 1:{
-                AssistantMethods.controlProgressBar(progressBar, 1);
+                AssistantMethods.setProgressBarValue(progressBar, 1);
                 return 2;
             }
             case 2:{
-                AssistantMethods.controlProgressBar(progressBar, 2);
+                AssistantMethods.setProgressBarValue(progressBar, 2);
                 return 4;
             }
             case 3:{
-                AssistantMethods.controlProgressBar(progressBar, 2);
+                AssistantMethods.setProgressBarValue(progressBar, 2);
                 return 6;
             }
             case 4:{
-                AssistantMethods.controlProgressBar(progressBar, 3);
+                AssistantMethods.setProgressBarValue(progressBar, 3);
                 return 8;
             }
             case 5:{
-                AssistantMethods.controlProgressBar(progressBar, 3);
+                AssistantMethods.setProgressBarValue(progressBar, 3);
                 return 10;
             }
             case 6:{
-                AssistantMethods.controlProgressBar(progressBar, 3);
+                AssistantMethods.setProgressBarValue(progressBar, 3);
                 return 12;
             }
             case 7:{
-                AssistantMethods.controlProgressBar(progressBar, 3);
+                AssistantMethods.setProgressBarValue(progressBar, 3);
                 return 14;
             }
             default:{

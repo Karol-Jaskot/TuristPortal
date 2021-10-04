@@ -7,10 +7,8 @@ import com.vaadin.flow.component.dependency.HtmlImport;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.page.Viewport;
-import com.vaadin.flow.component.select.Select;
 import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.Tabs;
-import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
 import com.vaadin.flow.theme.Theme;
@@ -18,11 +16,11 @@ import com.vaadin.flow.theme.material.Material;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import pl.jaskot.turistportal.backend.CountryGenerator;
-import pl.jaskot.turistportal.backend.QuestionGenerator;
-import pl.jaskot.turistportal.backend.entity.CountryRepo;
-import pl.jaskot.turistportal.backend.entity.QuestionRepo;
-import pl.jaskot.turistportal.frontend.views.assistant.AssistantView;
+import pl.jaskot.turistportal.backend.generators.CountryGenerator;
+import pl.jaskot.turistportal.backend.generators.QuestionGenerator;
+import pl.jaskot.turistportal.backend.repo.CountryRepo;
+import pl.jaskot.turistportal.backend.repo.QuestionRepo;
+import pl.jaskot.turistportal.frontend.views.AssistantView;
 import pl.jaskot.turistportal.frontend.views.AuthorView;
 import pl.jaskot.turistportal.frontend.views.CountryView;
 import pl.jaskot.turistportal.frontend.views.WelcomeView;
@@ -30,6 +28,8 @@ import pl.jaskot.turistportal.frontend.views.WelcomeView;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static pl.jaskot.turistportal.frontend.logic.components.AdvanceComponents.createDivPageForMenu;
 
 @Route("")
 @PWA(name = "TuristApp", shortName = "App")
@@ -56,9 +56,7 @@ public class MainApp extends AppLayout {
         this.countryRepo = countryRepo;
         this.questionRepo = questionRepo;
 
-        logger.debug("MainApp class has started");
-        Label lbName = new Label("Jaskot Travel ");
-        addToNavbar(new DrawerToggle(), lbName);
+        addToNavbar(new DrawerToggle(), new Label("Jaskot Travel "));
 
         // Set basic data to application if all data are empty
         addOferts();
@@ -78,28 +76,14 @@ public class MainApp extends AppLayout {
 
     private void createViews(){
         tab1 = new Tab("Witamy");
-        page1 = new Div();
-        WelcomeView welcomeView = new WelcomeView();
-        page1.add(welcomeView);
+        page1 = createDivPageForMenu(new WelcomeView(), true);
         page1.add();
-
         tab2 = new Tab("Oferta");
-        page2 = new Div();
-        CountryView countryView = new CountryView(countryRepo);
-        page2.add(countryView);
-        page2.setVisible(false);
-
+        page2 = createDivPageForMenu(new CountryView(countryRepo), false);
         tab3 = new Tab("Asystent");
-        page3 = new Div();
-        AssistantView  assistantView = new AssistantView(countryRepo, questionRepo);
-        page3.add(assistantView);
-        page3.setVisible(false);
-
+        page3 = createDivPageForMenu(new AssistantView(countryRepo, questionRepo), false);
         tab4 = new Tab("Autor");
-        page4 = new Div();
-        AuthorView authorView = new AuthorView();
-        page4.add(authorView);
-        page4.setVisible(false);
+        page4 = createDivPageForMenu(new AuthorView(), false);
     }
 
     private void connectingTabsToPages(){

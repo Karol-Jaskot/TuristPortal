@@ -1,7 +1,7 @@
-package pl.jaskot.turistportal.frontend.views.assistant.buttonsOptions;
+package pl.jaskot.turistportal.frontend.logic.assistantButtonsOptions;
 
 import com.vaadin.flow.component.progressbar.ProgressBar;
-import pl.jaskot.turistportal.frontend.views.assistant.AssistantMethods;
+import pl.jaskot.turistportal.frontend.logic.AssistantMethods;
 
 public abstract class ButtonTrueCountry {
     /**
