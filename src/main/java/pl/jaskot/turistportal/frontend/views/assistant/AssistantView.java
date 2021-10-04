@@ -6,6 +6,8 @@ import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.progressbar.ProgressBar;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import pl.jaskot.turistportal.backend.entity.Country;
 import pl.jaskot.turistportal.backend.entity.CountryRepo;
 import pl.jaskot.turistportal.backend.entity.Question;
@@ -20,7 +22,7 @@ import pl.jaskot.turistportal.frontend.views.assistant.buttonsOptions.ButtonTrue
  */
 public class AssistantView extends VerticalLayout {
 
-
+    Logger logger = LoggerFactory.getLogger(AssistantView.class);
     private CountryRepo countryRepo;
     private QuestionRepo questionRepo;
 
@@ -37,6 +39,8 @@ public class AssistantView extends VerticalLayout {
     public AssistantView(CountryRepo countryRepo, QuestionRepo questionRepo){
         this.countryRepo = countryRepo;
         this.questionRepo = questionRepo;
+
+        logger.debug("AssistantView will be creating");
         setDefaultHorizontalComponentAlignment(Alignment.CENTER);
         createComponents();
         cQ(1);
@@ -47,7 +51,7 @@ public class AssistantView extends VerticalLayout {
       */
     private void createComponents() {
         lbWelcome = new Label("Nasz asystent pomoże Ci dobrać właściwą wycieczkę:");
-        image = AssistantMethods.createImage();
+        image = AssistantMethods.createImage("https://www.fototapety24.net/img/wlasne_foto/d/fototapeta_wschod_slonca_nad_polem_lawendy.jpg");
 
         progressBar = new ProgressBar();
         AssistantMethods.controlProgressBar(progressBar, 0);
@@ -78,19 +82,23 @@ public class AssistantView extends VerticalLayout {
      * @param question to open
      */
     private void createQuestion(Question question){
-        removeAll();
-        Label lbQuestion = new Label();
-        lbQuestion.setText(question.getQuestionText());
+        if (question != null){
+            removeAll();
+            Label lbQuestion = new Label();
+            lbQuestion.setText(question.getQuestionText());
 
-        Div divButtons = new Div();
-        Button trueAnswer = AssistantMethods.createButton("Tak");
-        trueAnswer.getStyle().set("margin","12px");
-        trueAnswer.addClickListener(e-> trueOption(question));
-        Button falseAnswer = AssistantMethods.createButton("Nie");
-        falseAnswer.addClickListener(e-> falseOption(question));
+            Div divButtons = new Div();
+            Button trueAnswer = AssistantMethods.createButton("Tak");
+            trueAnswer.getStyle().set("margin","12px");
+            trueAnswer.addClickListener(e-> trueOption(question));
+            Button falseAnswer = AssistantMethods.createButton("Nie");
+            falseAnswer.addClickListener(e-> falseOption(question));
 
-        divButtons.add(trueAnswer , falseAnswer);
-        add(image, lbWelcome,progressBar, lbQuestion, divButtons);
+            divButtons.add(trueAnswer , falseAnswer);
+            add(image, lbWelcome,progressBar, lbQuestion, divButtons);
+        } else {
+            logger.error("createQuestion - > question = null");
+        }
     }
 
     /**

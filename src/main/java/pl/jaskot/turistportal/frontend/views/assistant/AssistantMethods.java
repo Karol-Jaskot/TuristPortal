@@ -44,11 +44,11 @@ public abstract class AssistantMethods {
     }
 
     /**
-     * Create image for assistant
+     * Create image for assistant from url and
      * @return this image
      */
-    public static Image createImage(){
-        Image image = new Image("https://www.fototapety24.net/img/wlasne_foto/d/fototapeta_wschod_slonca_nad_polem_lawendy.jpg","Foto");
+    public static Image createImage(String url){
+        Image image = new Image(url,"Awaria podczas wyświetlenia zdjęcia");
         image.setHeight("70px");
         image.setHeightFull();
         image.setWidthFull();

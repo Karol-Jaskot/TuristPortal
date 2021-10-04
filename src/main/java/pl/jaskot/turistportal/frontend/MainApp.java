@@ -15,6 +15,8 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
 import com.vaadin.flow.theme.Theme;
 import com.vaadin.flow.theme.material.Material;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import pl.jaskot.turistportal.backend.CountryGenerator;
 import pl.jaskot.turistportal.backend.QuestionGenerator;
@@ -37,6 +39,7 @@ import java.util.stream.Stream;
 @Theme(value = Material.class, variant = Material.DARK)
 public class MainApp extends AppLayout {
 
+    Logger logger = LoggerFactory.getLogger(MainApp.class);
     private Tab tab1, tab2, tab3, tab4, tab5;
     private Div page1, page2, page3, page4, page5;
     private Map<Tab, Component> tabsToPages;
@@ -53,8 +56,13 @@ public class MainApp extends AppLayout {
         this.countryRepo = countryRepo;
         this.questionRepo = questionRepo;
 
+        logger.debug("MainApp class has started");
         Label lbName = new Label("Jaskot Travel ");
         addToNavbar(new DrawerToggle(), lbName);
+
+        // Set basic data to application if all data are empty
+        addOferts();
+        addQuestions();
 
         createTabs();
         createDivPages();
@@ -62,16 +70,13 @@ public class MainApp extends AppLayout {
         setContent(page1);
     }
 
-    private void addOferts() {
-        CountryGenerator countryGenerator = new CountryGenerator(countryRepo);
-    }
-    private void addQuestions(){ QuestionGenerator questionGenerator = new QuestionGenerator(questionRepo); }
+    private void addOferts() { new CountryGenerator(countryRepo);}
+    private void addQuestions(){ new QuestionGenerator(questionRepo); }
 
     // views control
 // =============================================================================================================
 
     private void createViews(){
-
         tab1 = new Tab("Witamy");
         page1 = new Div();
         WelcomeView welcomeView = new WelcomeView();
@@ -95,7 +100,6 @@ public class MainApp extends AppLayout {
         AuthorView authorView = new AuthorView();
         page4.add(authorView);
         page4.setVisible(false);
-
     }
 
     private void connectingTabsToPages(){
@@ -128,5 +132,4 @@ public class MainApp extends AppLayout {
         setContent(selectedPage);
         pagesShown.add(selectedPage);
     }
-
 }
