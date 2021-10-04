@@ -1,10 +1,9 @@
-package pl.jaskot.turistportal.backend;
+package pl.jaskot.turistportal.backend.generators;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pl.jaskot.turistportal.backend.entity.Country;
-import pl.jaskot.turistportal.backend.entity.CountryRepo;
-import pl.jaskot.turistportal.frontend.MainApp;
+import pl.jaskot.turistportal.backend.repo.CountryRepo;
 
 public class CountryGenerator {
 

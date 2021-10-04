@@ -1,9 +1,9 @@
-package pl.jaskot.turistportal.backend;
+package pl.jaskot.turistportal.backend.generators;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pl.jaskot.turistportal.backend.entity.Question;
-import pl.jaskot.turistportal.backend.entity.QuestionRepo;
+import pl.jaskot.turistportal.backend.repo.QuestionRepo;
 
 public class QuestionGenerator {
 
