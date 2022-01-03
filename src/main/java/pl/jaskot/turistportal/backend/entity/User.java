@@ -2,15 +2,17 @@ package pl.jaskot.turistportal.backend.entity;
 
 import lombok.*;
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity @Data @Builder
 @NoArgsConstructor @AllArgsConstructor
-public class Question {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private int number;
-    private String questionText;
+    private String first_name;
+    private String last_name;
+    private LocalDate create_date;
 
 }

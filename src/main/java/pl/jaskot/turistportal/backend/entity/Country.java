@@ -1,14 +1,10 @@
 package pl.jaskot.turistportal.backend.entity;
 
-import lombok.Data;
+import lombok.*;
+import javax.persistence.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
-@Data
+@Entity @Data @Builder
+@NoArgsConstructor @AllArgsConstructor
 public class Country {
 
     @Id
@@ -17,13 +13,4 @@ public class Country {
     private String name, imgFlag, imgPhoto, textOffer;
     private int price;
 
-    public Country() {}
-
-    public Country(String name, String imgFlag, String imgPhoto, String textOffer, int price) {
-        this.name = name;
-        this.imgFlag = imgFlag;
-        this.imgPhoto = imgPhoto;
-        this.textOffer = textOffer;
-        this.price = price;
-    }
 }
