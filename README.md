@@ -5,14 +5,13 @@ Educational project
 A simple travel agency application containing an assistant that helps the user choose the best travel direction for him. The project based on an intelligent expert system that selects the right offer based on the user's response. 
 
 * Author: Karol Jaskot
- * Student PWSZ in Legnica
- * E-mail: karol.jaskot97@gmail.com
+* E-mail: karol.jaskot97@gmail.com
 
 ##
 
 This project is hosted and ready to use.  
 App adress:
-https://turistportal.herokuapp.com/
+http://www.karol-jaskot.pl:8082/
 
 ### Tech
 
